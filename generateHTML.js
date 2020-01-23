@@ -170,5 +170,22 @@ function generateHTML(data) {
             zoom: .75; 
           } 
          }
-      </style>`
+      </style>
+      </head>
+      <body>
+      <ul>
+<li>Profile image</li>
+<li>User name</li>
+<li>User location via Google Maps</li>
+<li>User GitHub profile</li>
+<li>User blog</li>
+<li>User bio</li>
+<li>Number of public repositories</li>
+<li>Number of followers</li>
+<li>Number of GitHub stars</li>
+<li>Number of users following</li>
+</ul>
+      </body>
+      `
+      
         }
