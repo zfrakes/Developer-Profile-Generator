@@ -23,8 +23,8 @@ function writeToFile(fileName, data) {
 function init() {
 prompt(questions).then((data)=>{
     console.log(data)
-    // use data to re0guest github api users input 
-    // use to generate html fuction to dymalically render the users data
+    // use data to request github api users input 
+    // use to generate html fuction to dynamically render the users data
     // use libary to write a new pdf  
 });
 }
