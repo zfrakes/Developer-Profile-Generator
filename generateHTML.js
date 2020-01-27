@@ -188,4 +188,8 @@ function generateHTML(data) {
       </body>
       `
       
-        }
+     }
+     module.exports = {
+            generateHTML
+          };
+
