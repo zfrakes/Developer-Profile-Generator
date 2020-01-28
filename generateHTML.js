@@ -172,18 +172,19 @@ function generateHTML(data) {
          }
       </style>
       </head>
-      <body>
+      <body class= "main">
+      
       <ul>
-<li>Profile image</li>
-<li>User name</li>
-<li>User location via Google Maps</li>
-<li>User GitHub profile</li>
-<li>User blog</li>
-<li>User bio</li>
-<li>Number of public repositories</li>
-<li>Number of followers</li>
+<li>Profile image = ${data.image}</li>
+<li>User name =${data.name}</li>
+<li>User location via Google Maps =${data.location}</li>
+<li>User GitHub profile< =${data.githubprofile}/li>
+<li>User blog =${data.blog}</li>
+<li>User bio = ${data.bio}</li>
+<li>Number of public repositories = ${data.repos}</li>
+<li>Number of followers = ${data.followers}</li>
 <li>Number of GitHub stars</li>
-<li>Number of users following</li>
+<li>Number of users following = ${data.following}</li>
 </ul>
       </body>
       `
