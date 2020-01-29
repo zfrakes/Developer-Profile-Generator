@@ -1,9 +1,9 @@
 const fs = require('fs');
-var pdf = require('html-pdf');
-var generateHTML = require("./generateHTML.js");
-var github = require('octonode');
-var inquirer=require("inquirer")
-var prompt = inquirer.createPromptModule();
+const pdf = require('html-pdf');
+const generateHTML = require("./generateHTML.js");
+const github = require('octonode');
+const inquirer=require("inquirer")
+const prompt = inquirer.createPromptModule();
 
 const questions = [
 { 
@@ -27,19 +27,19 @@ function writeToFile(fileName, data) {
 function init() {
 prompt(questions).then((data)=>{
     // console.log(data)
-    var client = github.client();
+    const client = github.client();
     client.get('/users/'+ data["github"], {}, function (err, status, body, headers) {
         // console.log(body); 
-       var follower=body["followers"]
-       var following=body["following"]
-       var repos=body["public_repos"]
-       var bio =body["bio"]
-       var location =body["location"]
-       var name =body["name"]
-       var company = body["company"]
-       var blog =body["blog"]
-       var githubprofile =body["url"]
-       var image =body["avatar_url"]
+       const follower=body["followers"]
+       const following=body["following"]
+       const repos=body["public_repos"]
+       const bio =body["bio"]
+       const location =body["location"]
+       const name =body["name"]
+       const company = body["company"]
+       const blog =body["blog"]
+       const githubprofile =body["url"]
+       const image =body["avatar_url"]
        data.followers=follower
        data.following=following
        data.repos=repos
@@ -59,8 +59,8 @@ fs.writeFile('page.html', html_text, (err) => {
 
     // success case, the file was saved
     // console.log('Html saved!');
-var html = fs.readFileSync('./page.html', 'utf8');
-var options = { format: 'Letter' };
+const html = fs.readFileSync('./page.html', 'utf8');
+const options = { format: 'Letter' };
 pdf.create(html, options).toFile('./page.pdf', function(err, res) {
   if (err) return console.log(err);
 //   console.log(res); // { filename: '/app/businesscard.pdf' }
