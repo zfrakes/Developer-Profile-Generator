@@ -172,21 +172,71 @@ function generateHTML(data) {
          }
       </style>
       </head>
-      <body class= "main">
-      
-      <ul>
-<li>Profile image = ${data.image}</li>
-<li>User name =${data.name}</li>
-<li>User location via Google Maps =${data.location}</li>
-<li>User GitHub profile< =${data.githubprofile}/li>
-<li>User blog =${data.blog}</li>
-<li>User bio = ${data.bio}</li>
-<li>Number of public repositories = ${data.repos}</li>
-<li>Number of followers = ${data.followers}</li>
-<li>Number of GitHub stars</li>
-<li>Number of users following = ${data.following}</li>
-</ul>
-      </body>
+      <body class= "wrapper">
+      <nav class="">
+               <div class="navbar-nav ml-auto">
+                  
+               </div>
+           </div> 
+        </div>  
+   </nav>
+      <h1 class="intro-text"><span class="lead" id="typed"></span></h1>
+      <span class="continue"><a href="#about"></a></span>
+    </div>
+  </div
+                  
+  <div class="col-md-6 col-xs-12 col-sm-6 portfolio-card-holder">
+      <div class=" photo-header">
+  <a href = "${data.githubprofile}"> <img src=" https://avatars2.githubusercontent.com/u/55991335?v=4"></a>
+  <h1>Hi!<br>My Name is ${data.name}!</h1>
+  <p>${data.bio}</p>
+  <div class="links-nav">
+    <a class= "nav-link" href="https://www.google.com/maps/place/${data.location}" target="_blank">${data.location}</a>
+    <a class= "nav-link" href="${data.githubprofile}">GitHub</a>
+    <a class= "nav-link" href="${data.blog}">Blog</a>
+  </div>
+  </div>     
+         
+<main>
+  <div class="row">
+      <p>${data.bio}</p>   
+    </div>
+    <div class="row">
+  <div class="col">
+  
+    <div class="card">
+      <h2>Public Repositories<br>${data.repos}</h2>
+
+    </div>
+  </div>
+  <div class="col">
+  
+    <div class="card">
+      <h2>Followers<br>${data.followers}</h2>
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+  
+    <div class="card">
+      <h2>GitHub Stars<br>3</h2>
+
+    </div>
+  </div>
+  <div class="col">
+  
+    <div class="card">
+      <h2>Followering<br>${data.following}</h2>
+
+    </div>
+  </div>
+</div>
+</main>
+           
+
+    </body>
       `
       
      }
